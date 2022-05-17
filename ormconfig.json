@@ -1,6 +1,6 @@
 {
-  "type": "sqlite",
-  "database": "database.sqlite",
+  "type": "mysql",
+  "database": "database.mysql",
   "synchronize": true,
   "logging": true,
   "entities": ["src/entity/**/*.ts"],
