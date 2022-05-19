@@ -9,6 +9,7 @@
     "typescript": "3.7.2"
   },
   "dependencies": {
+    "@types/graphql": "^14.0.7",
     "apollo-server-express": "^2.9.9",
     "dotenv": "^16.0.1",
     "express": "^4.17.1",
