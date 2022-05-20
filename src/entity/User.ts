@@ -1,10 +1,10 @@
 import { Field, Int, ObjectType } from "type-graphql";
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, BaseEntity } from "typeorm";
 import { LogTrails } from "./LogTrails";
 
 @ObjectType()
 @Entity()
-export class User {
+export class User extends BaseEntity {
 
   @Field(() => Int)
   @PrimaryGeneratedColumn()
@@ -21,7 +21,7 @@ export class User {
   @Field(() => Int)
   @Column()
   age: number;
-  
+
   // Relationship
   @OneToMany(() => LogTrails, logTrails => logTrails.user)
   logTrails: LogTrails[];
